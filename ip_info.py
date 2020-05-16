@@ -23,7 +23,7 @@ class Whois_Ip(object):
                 +++++++++++++++++++++++++++++++++++++++++++++++++++++
                 #    Ip_Info                                        #
                 #    Version 0.1                                    #
-                #    Github : https://github.com/reza-tanha/        #
+                #    Ip_info : https://github.com/reza-tanha/        #
                 #    Telegram : T.me/S3CURITY_GARY                  #
                 #    Youtube : https://bit.ly/2yas3rm               #
                 #    Code By : Haji (Reza)                          #
@@ -68,10 +68,11 @@ class Whois_Ip(object):
 
 
 if __name__ == '__main__':
-    w = Whois_Ip(sys.argv[1])
     if len(sys.argv) == 2:
+        w = Whois_Ip(sys.argv[1])
         w.banner()
         w.whois_ip()
     else:
+        w = Whois_Ip('0.0.0.0')
         w.banner()
         print(Fore.LIGHTCYAN_EX+ "\t\tusage : python3 who-ip.py 0.0.0.0\n\n")
