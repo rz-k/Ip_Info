@@ -23,7 +23,7 @@ class Whois_Ip(object):
                 +++++++++++++++++++++++++++++++++++++++++++++++++++++
                 #    Ip_Info                                        #
                 #    Version 0.1                                    #
-                #    Ip_info : https://github.com/reza-tanha/       #
+                #    Ip_info : https://github.com/reza-tanha/        #
                 #    Telegram : T.me/S3CURITY_GARY                  #
                 #    Youtube : https://bit.ly/2yas3rm               #
                 #    Code By : Haji (Reza)                          #
@@ -58,13 +58,18 @@ class Whois_Ip(object):
             map_1 = "https://www.google.com/maps/place/"+a+b+"/@"+a+","+b
         except:
             pass
-        try:
-            r = requests.post("https://cleanuri.com/api/v1/shorten",
-                              data={"url": map_1})
-            map = r.json()['result_url']
-            print(Fore.GREEN+"Google Map location : "+Fore.CYAN+map)
-        except:
-            print(Fore.RED + "Not Found Google Map location : ")
+
+        count = 0
+        your_ip = None
+        while count < 12 and not your_ip:
+            count += 1
+            try:
+                r = requests.post("https://cleanuri.com/api/v1/shorten",data={"url": map_1})
+                map = r.json()['result_url']
+                print(Fore.GREEN + "Google Map location : " + Fore.CYAN + map)
+                break
+            except:
+                print(Fore.RED + "[*] Not Found Google Map location Pleaas Waiting ")
 
 
 if __name__ == '__main__':
