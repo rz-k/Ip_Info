@@ -23,7 +23,7 @@ class Whois_Ip(object):
                 +++++++++++++++++++++++++++++++++++++++++++++++++++++
                 #    Ip_Info                                        #
                 #    Version 0.1                                    #
-                #    Ip_info : https://github.com/reza-tanha/        #
+                #    Ip_info : https://github.com/reza-tanha/       #
                 #    Telegram : T.me/S3CURITY_GARY                  #
                 #    Youtube : https://bit.ly/2yas3rm               #
                 #    Code By : Haji (Reza)                          #
